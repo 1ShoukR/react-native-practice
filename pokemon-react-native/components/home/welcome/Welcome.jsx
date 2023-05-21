@@ -14,6 +14,12 @@ const Welcome = () => {
         <Text style={styles.userName}>Hello Rahmin</Text>
         <Text style={styles.welcomeMessage}>Welcome to your Pokedex</Text>
       </View>
+      <View style={styles.searchContainer}>
+        <View style={styles.searchWrapper}>
+          <TextInput style={styles.searchInput} 
+          />
+        </View>
+      </View>
     </View>
   )
 }
