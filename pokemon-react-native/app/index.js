@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Stack, useRouter } from 'expo-router';
 
 import {COLORS, SIZES, FONTS, icons, images} from '../constants';
-import { ScreenHeaderBtn } from '../components';
+import { ScreenHeaderBtn, Welcome } from '../components';
 import Pokemon from '../components/pokemon/Pokemon';
 
 // view are divs and text are p tags
@@ -32,6 +32,7 @@ const Home = () => {
                     flex: 1,
                     padding: SIZES.medium
                 }}>
+                    <Welcome />
                     <Pokemon />
                 </View>
             </ScrollView>
