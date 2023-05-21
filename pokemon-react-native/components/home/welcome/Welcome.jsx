@@ -10,7 +10,10 @@ const Welcome = () => {
   const router = useRouter()
   return (
     <View>
-      <Text>Welcome</Text>
+      <View styles={styles.container}>
+        <Text style={styles.userName}>Hello Rahmin</Text>
+        <Text style={styles.welcomeMessage}>Welcome to your Pokedex</Text>
+      </View>
     </View>
   )
 }
