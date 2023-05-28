@@ -1,11 +1,19 @@
 import { View, Text, TextInput, TouchableOpacity, Image, FlatList } from 'react-native';
+import { useState } from 'react';
 import { useRouter } from 'expo-router';
+import { fetchPokeomon } from '../../../actions/fetchPokemon';
 
 import styles from './welcome.style';
 import { icons, SIZES, COLORS, FONTS } from '../../../constants';
 
 const Welcome = () => {
 	const router = useRouter();
+  const [searchPokemon, setSearchPokemon] = useState('');
+
+
+	const handlePokemonSearchPress = () => {
+			fetchPokeomon(searchPokemon);
+	};
 	return (
 		<View>
 			<View style={styles.container}>
@@ -14,8 +22,13 @@ const Welcome = () => {
 			</View>
 			<View style={styles.searchContainer}>
 				<View style={styles.searchWrapper}>
-					<TextInput placeholderTextColor="#000" placeholder="search for your pokemon" style={styles.searchInput} />
+					<TextInput onChangeText={setSearchPokemon} value={searchPokemon} placeholderTextColor="#000" placeholder="search for your pokemon" style={styles.searchInput} />
 				</View>
+        <View>
+          <TouchableOpacity style={styles.searchBtn} onPress={handlePokemonSearchPress}>
+            <Image  source={icons.search} resizeMode="contain" style={styles.searchBtnImage} />
+          </TouchableOpacity>
+        </View>
 			</View>
 		</View>
 	);
