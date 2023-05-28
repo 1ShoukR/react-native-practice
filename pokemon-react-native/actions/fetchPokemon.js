@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-export const fetchPokeomon = (options) => {
-	console.log("this is the options", options)
+export const fetchPokeomon = (lowercaseSearchPokemon) => {
+	console.log('this is the searchPokemon', lowercaseSearchPokemon);
 	axios
-		.get(`https://pokeapi.co/api/v2/pokemon/${options}/`)
+		.get(`https://pokeapi.co/api/v2/pokemon/${lowercaseSearchPokemon}/`)
 		.then(function (response) {
 			// handle <successwq></successwq>
 			console.log(response);
