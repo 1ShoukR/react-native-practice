@@ -9,10 +9,12 @@ import { icons, SIZES, COLORS, FONTS } from '../../../constants';
 const Welcome = () => {
 	const router = useRouter();
   const [searchPokemon, setSearchPokemon] = useState('');
+  console.log("searchPokemon", searchPokemon)
 
 
 	const handlePokemonSearchPress = () => {
-			fetchPokeomon(searchPokemon);
+      const lowercaseSearchPokemon = searchPokemon.toLowerCase();
+			fetchPokeomon(lowercaseSearchPokemon);
 	};
 	return (
 		<View>
