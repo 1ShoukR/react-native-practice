@@ -1,8 +1,9 @@
 import axios from 'axios';
 
-const fetchPokeomon = (options) => {
+export const fetchPokeomon = (options) => {
+	console.log("this is the options", options)
 	axios
-		.get(`https://pokeapi.co/api/v2/ability/${options}/`)
+		.get(`https://pokeapi.co/api/v2/pokemon/${options}/`)
 		.then(function (response) {
 			// handle <successwq></successwq>
 			console.log(response);
@@ -12,3 +13,5 @@ const fetchPokeomon = (options) => {
 			console.log(error);
 		});
 };
+
+
