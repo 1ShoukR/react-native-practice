@@ -22,7 +22,7 @@ const Welcome = () => {
 			</View>
 			<View style={styles.searchContainer}>
 				<View style={styles.searchWrapper}>
-					<TextInput onChangeText={setSearchPokemon} value={searchPokemon} placeholderTextColor="#000" placeholder="search for your pokemon" style={styles.searchInput} />
+					<TextInput onChangeText={setSearchPokemon} value={searchPokemon} placeholderTextColor={COLORS.gray} placeholder="search for your pokemon" style={styles.searchInput} />
 				</View>
         <View>
           <TouchableOpacity style={styles.searchBtn} onPress={handlePokemonSearchPress}>
