@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-const fetchPokeomon = () => {
+const fetchPokeomon = (options) => {
 	axios
-		.get('https://pokeapi.co/api/v2/ability/{id or name}/')
+		.get(`https://pokeapi.co/api/v2/ability/${options}/`)
 		.then(function (response) {
-			// handle success
+			// handle <successwq></successwq>
 			console.log(response);
 		})
 		.catch(function (error) {
