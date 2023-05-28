@@ -1,7 +1,7 @@
 import { View, Text, TextInput, TouchableOpacity, Image, FlatList } from 'react-native';
 import { useState } from 'react';
 import { useRouter } from 'expo-router';
-import { fetchPokeomon } from '../../../actions/fetchPokemon';
+import { fetchPokemon } from '../../../actions/fetchPokemon';
 
 import styles from './welcome.style';
 import { icons, SIZES, COLORS, FONTS } from '../../../constants';
@@ -14,7 +14,7 @@ const Welcome = () => {
 
 	const handlePokemonSearchPress = () => {
       const lowercaseSearchPokemon = searchPokemon.toLowerCase();
-			fetchPokeomon(lowercaseSearchPokemon);
+			fetchPokemon(lowercaseSearchPokemon);
 	};
 	return (
 		<View>
