@@ -7,12 +7,11 @@ import styles from './screenheader.style'
 import { icons } from '../../../constants'
 
 const ScreenHeaderBtn = ({ iconUrl, dimension }) => {
-	const options = 'bulbasaur'
-	const handlePokemonSearchPress = () => {
-		fetchPokeomon(options)
+	const handleLeftSideNav = () => {
+
 	}
 	return (
-		<TouchableOpacity onPress={handlePokemonSearchPress} style={styles.btnContainer}>
+		<TouchableOpacity onPress={handleLeftSideNav} style={styles.btnContainer}>
 			<Image source={iconUrl} resizeMode="cover" style={styles.btnImg(dimension)}/>
 		</TouchableOpacity>
 	);
