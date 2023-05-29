@@ -16,3 +16,19 @@ export const fetchPokemon = async (lowercaseSearchPokemon) => {
 		throw error; // Rethrow the error to be caught in the calling function
 	}
 };
+
+
+export const fetcchInitialHomepagePokemon = async () => {
+	try {
+		const response = await axios
+			.get(`https://pokeapi.co/api/v2/pokemon/1/`);
+		// handle success
+		console.log(response);
+		return response.data;
+	}
+	catch (error) {
+		// handle error
+		console.log(error);
+		throw error; // Rethrow the error to be caught in the calling function
+	}
+}
