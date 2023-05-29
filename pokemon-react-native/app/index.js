@@ -13,32 +13,26 @@ import Pokemon from '../components/pokemon/Pokemon';
 const Home = () => {
     const router = useRouter();
     return (
-        <SafeAreaView style={{flex: 1, backgroundColor: COLORS.lightWhite}}>
-            <Stack.Screen 
-            options={{
-                headerStyle: { backgroundColor: COLORS.lightWhite },
-                headerShadowVisible: false,
-                headerLeft: () => (
-                    <ScreenHeaderBtn iconUrl={icons.menu} dimension="60%"/>
-                ),
-                headerRight: () => (
-                    <ScreenHeaderBtn iconUrl={images.profile} dimension="100%"/>
-                ),
-                headerTitle: ''
-            }}
-            />
-            <ScrollView showsVerticalScrollIndicator={false}>
-                <View style={{
-                    flex: 1,
-                    padding: SIZES.medium
-                }}>
-                    <Welcome />
-                    <Pokemon />
-                </View>
-            </ScrollView>
-            
-        </SafeAreaView>
-    )
+			<SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
+				<Stack.Screen
+					options={{
+						headerStyle: { backgroundColor: COLORS.lightWhite },
+						headerShadowVisible: false,
+						headerLeft: () => <ScreenHeaderBtn iconUrl={icons.menu} dimension="60%" />,
+						headerRight: () => <ScreenHeaderBtn iconUrl={images.profile} dimension="100%" />,
+						headerTitle: '',
+					}}
+				/>
+				<ScrollView showsVerticalScrollIndicator={false}>
+					<View style={{ flex: 1, padding: SIZES.medium }}>
+						<Welcome />
+						<ScrollView horizontal showsHorizontalScrollIndicator={false}>
+							<Pokemon />
+						</ScrollView>
+					</View>
+				</ScrollView>
+			</SafeAreaView>
+		);
 }
 
 export default Home;
