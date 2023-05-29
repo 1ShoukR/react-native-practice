@@ -5,7 +5,7 @@ import { fetchPokemon } from '../../../actions/fetchPokemon';
 
 import styles from './welcome.style';
 import { icons, SIZES, COLORS, FONTS } from '../../../constants';
-import ContentLoader from 'react-native-easy-content-loader';
+import {ContentLoader, Bullets} from 'react-native-easy-content-loader';
 
 const Welcome = () => {
 	const router = useRouter();
@@ -50,7 +50,7 @@ const Welcome = () => {
 					</TouchableOpacity>
 				</View>
 			</View>
-			{isLoading ? <ContentLoader active avatar /> : null}
+			{isLoading ? <Bullets active listSize={3} /> : null}
 		</View>
 	);
 };
